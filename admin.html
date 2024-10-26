@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="admin">   
+    <div class="container">
+        <div class="sidebar">
+            <img src="assets/IMG-20240501-WA0010.jpg" alt="">
+            <ul>
+                <li><a href="#" id="customers-link">Müşteriler</a></li>
+                <li><a href="#" id="products-link">Ürünler</a></li>
+                <li><a href="#" id="orders-link">Siparişler</a></li>
+            </ul>
+        </div>
+        <div class="fakesidebar">
+            ada
+        </div>
+        <div class="content">
+            <div id="customers" class="tab-content">
+                
+
+                <ul id="customer-list"></ul>
+                <div class="tab-ust">
+                    <h2>Müşteriler</h2>
+                    <div  class="cta-button" id="customer-arama">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type=search name=q aria-label="Search for inspiration"/>   
+        
+                    </div>
+                </div>
+               
+                <div class="customer-container">
+                    <h1>Tüm Müşteriler</h1>
+                    <table class="customer-table">
+                        <thead>
+                            <tr>
+                                <th>Müşteri ID</th>
+                                <th>İsim Soyisim</th>
+                                <th>E-Mail</th>
+                                <th>Telefon Numarası</th>
+                                <th>Kayıt Tarihi</th>
+                                <th>Güncelleme Tarihi</th>
+                                <th>Adres</th>  
+                            </tr>
+                            <tr>
+                                <td><input type="text" id="customer-id" placeholder="Müşteri ID..."></td>
+                                <td><input type="text" id="full-name" placeholder="İsim Soyisim..."></td>
+                                <td><input type="text" id="e-mail" placeholder="E-MAİL..."></td>
+                                <td><input type="text" id="phone-number" placeholder="Telefon Numarası..."></td>
+                                <td><input type="text" id="added-date" placeholder="Kayıt Tarihi..."></td>
+                                <td><input type="text" id="update-date"placeholder="Güncelleme..."></td>
+                                <td><input type="text" id="adress" placeholder="Adres..."></td>
+                                <td><button id="add-customer">Müşteri Ekle</button></td>
+                                
+                            </tr>
+                           
+                        </thead>
+                        <tbody id="customer-items">
+                            <!-- Ürünler buraya eklenecek -->
+                        </tbody>
+                    </table>
+                </div>
+                   
+                <ul id="customer-list"></ul>
+
+
+            </div>
+            <div id="products" class="tab-content">
+                
+                <ul id="products-list"></ul>
+                <div class="tab-ust">
+                    <h2>Ürünler</h2>
+                    <div  class="cta-button" id="products-arama">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type=search name=q aria-label="Search for inspiration"/>   
+        
+                    </div>
+                </div>
+               
+                <div class="product-container">
+                    <h1>Tüm Ürünler</h1>
+                    <table class="product-table">
+                        <thead>
+                            <tr>
+                                <th>Ürün ID</th>
+                                <th>Ürün Adı</th>
+                                <th>Kategori</th>
+                                <th>Ürün Fiyatı</th>
+                                <th>Kayıt Tarihi</th>
+                                <th>Güncelleme Tarihi</th>
+                                <th>Fotoğraf Yolu</th>  
+                                <th>Ürün Detayı</th> 
+                            </tr>
+                            <tr>
+                                <td><input type="text" id="product-id" placeholder="Ürün ID..."></td>
+                                <td><input type="text" id="product-name" placeholder="Ürün Adı..."></td>
+                                <td><input type="text" id="category" placeholder="Kategori..."></td>
+                                <td><input type="text" id="product-price" placeholder="Fiyat..."></td>
+                                <td><input type="text" id="product-added-date" placeholder="Kayıt Tarihi..."></td>
+                                <td><input type="text" id="product-update-date"placeholder="Güncelleme Tarihi..."></td>
+                                <td><input type="text" id="photo-path" placeholder="Fotoğraf Yolu..."></td>
+                                <td><input type="text" id="details" placeholder="Detay..."></td>
+
+                                <td><button id="add-product">Ürün Ekle</button></td>
+                                
+                            </tr>
+                           
+                        </thead>
+                        <tbody id="product-items">
+                            <!-- Ürünler buraya eklenecek -->
+                        </tbody>
+                    </table>
+                </div>
+                   
+                <ul id="product-list"></ul>
+
+
+            </div>
+            <div id="orders" class="tab-content">
+                <div class="tab-ust">
+                    <h2>Siparişler</h2>
+                    <div  class="cta-button" id="siparis-arama">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type=search name=q aria-label="Search for inspiration"/>   
+        
+                    </div>
+                </div>
+               
+                <div class="siparis-container">
+                    <h1>Tüm Siparişler</h1>
+                    <table class="siparis-table">
+                        <thead>
+                            <tr>
+                                <th>Sipariş NO</th>
+                                <th>Durumu</th>
+                                <th>Müşteri ID</th>
+                                <th>Sipariş Tarihi</th>
+                                <th>Ödeme Yöntemi</th>           
+                                <th>Fiyat</th>
+                            </tr>
+                            <tr>
+                                <td><input type="text" id="order-no" placeholder="Sipariş Numarası..."></td>
+                                <td></td>
+                                <td><input type="text" id="order-customer-id" placeholder="Müşteri ID..."></td>
+                                <td><input type="text" id="order-date" placeholder="Sipariş Tarihi..."></td>
+                                <td><input type="text" id="payment-method" placeholder="Ödeme Yöntemi..."></td>
+                                <td><input type="text" id="price"placeholder="Fiyat..."></td>
+                                <td><button id="add-order">Sipariş Ekle</button></td>
+                            </tr>
+                           
+                        </thead>
+                        <tbody id="cart-items">
+                            <!-- Ürünler buraya eklenecek -->
+                        </tbody>
+                    </table>
+                </div>
+                   
+                <ul id="order-list"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
